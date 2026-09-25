@@ -115,6 +115,4 @@ pythonw tools/run_dashboard.py --demo
 
 ## 许可证
 
-本项目以 [PolyForm Noncommercial 1.0.0](LICENSE) 提供源码：允许非商用使用、修改和分发；商业使用需要另行取得授权。这是**源码可用**项目，不属于 OSI 定义的开源软件。
-
-上游参考项目采用 Apache 2.0；其声明及协议文本分别见 [NOTICE](NOTICE) 和 [LICENSES/Apache-2.0.txt](LICENSES/Apache-2.0.txt)。历史上已按 Apache 2.0 获得授权的版本不受此次协议变更追溯影响。更多设想见 [ideas.md](ideas.md)。
+本项目采用 [PolyForm Noncommercial 1.0.0](LICENSE) 许可证。

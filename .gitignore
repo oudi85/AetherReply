@@ -1,0 +1,28 @@
+# 本机数据、真实配置与凭据：一律不入库
+/data/
+/config.toml
+/config.toml.tmp
+*.toml.tmp
+*.dpapi
+keys.json
+*.key
+*.sqlite
+*.db
+*.db-wal
+*.db-shm
+*.voicepack
+
+# 日志与截图
+*.log
+*.png
+!/assets/aetherreply-icon.png
+*.jpg
+*.jpeg
+*.bmp
+/screenshots/
+
+# 含真实联系人标识的一次性脚本
+/tools/send_contact_test.py
+
+__pycache__/
+*.pyc

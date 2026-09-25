@@ -1,0 +1,11 @@
+AetherReply
+Copyright 2026 AetherReply contributors
+
+The WeChat accessibility gate activation and UI Automation workflow in this
+project are informed by and adapted for this application from the publicly
+documented work in fanyuantaier/wechatauto-replica:
+https://github.com/fanyuantaier/wechatauto-replica
+That project is licensed under Apache License 2.0; see
+LICENSES/Apache-2.0.txt. AetherReply's current release is distributed under
+PolyForm Noncommercial License 1.0.0; see LICENSE. This application uses a
+separate implementation with a local database reader and no OCR sending path.

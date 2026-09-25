@@ -1,0 +1,43 @@
+# 复制为 config.toml 后按需修改。所有路径留空则自动探测。
+
+[wechat]
+# 微信 4.x 数据根目录（包含 wxid_xxx 子目录的那个 xwechat_files）
+# data_dir = "D:\\微信\\xwechat_files"
+# 只同步这些库；留空 = message / contact / session 全部
+# dbs = ["message_0.db", "contact.db"]
+
+[llm]
+# 任何 OpenAI 兼容接口都行（DeepSeek / 智谱 / OpenRouter / Ollama...）
+base_url = "https://open.bigmodel.cn/api/paas/v4"
+api_key = ""                # 也可用环境变量 AUTO_REPLY_API_KEY
+# 若用 Windows DPAPI 加密文件，可设置 api_key_file = "data/deepseek.key.dpapi"
+model = "glm-4-flash"
+thinking = false
+reasoning_effort = "high"   # DeepSeek 思考模式可选 low / high / max
+# 生成人格画像时给 LLM 发样本前做的脱敏：手机号/身份证号替换为占位符
+redact_sensitive = true
+
+[sync]
+# 解密后的明文库和镜像库存放目录（相对本项目根）
+data_dir = "data"
+# watch 模式轮询间隔（秒）
+poll_seconds = 5
+max_event_age_seconds = 300
+debounce_seconds = 2
+
+[auto_send]
+# 只有显式启用并列入 wxid 的一对一会话才会自动发送。群聊与文件传输助手跳过。
+enabled = false
+allow_talkers = []
+
+[decision]
+provider = "default"       # Jev 排序接口预留；未接通前保持 default
+
+[reply_plan]
+enabled = false             # 启用按本人习惯连发多条；建议先在仅生成模式观察
+max_parts = 3               # 单轮最多发送几条，范围 1-3
+allow_stickers = false      # 需本机校准，且只从人工分类的表情中选取
+
+[stickers]
+vision_model = ""           # 可选：支持图片输入的模型，用于本机收藏表情打标签
+vision_base_url = ""        # 可选：留空时沿用 [llm].base_url
